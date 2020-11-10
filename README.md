@@ -8,27 +8,28 @@ Run FileMaker Server 19 for Linux in the Hetzner Cloud.
 
 ## 1. Register an Account
 
-Go to Hetzner and register a free account. If you [follow our referral link](https://hetzner.cloud/?ref=KzxqMaXk51C8), you get a € 20,– credit for your projects. In case you stay  with Hetzner, we receive a € 10,– bonus that we will donate to the [Stiftung Bildung](https://www.stiftungbildung.com). 
+Go to Hetzner and register a free account. You get a € 20,– credit for plying around if you [follow our referral link](https://hetzner.cloud/?ref=KzxqMaXk51C8). In case you stay  with Hetzner, we receive a € 10,– bonus that we will donate to the [Stiftung Bildung](https://www.stiftungbildung.com). 
 
 
 
 ## 2. Add a Server
 
-In the Console https://console.hetzner.cloud/projects create a project and in there add a new server. You will need Centos 7 and we strongly recommend adding the SSH key for you local machine. Start the server and ssh into it.
+In the [Console](https://console.hetzner.cloud/projects) create a project and add a new server. You will need Centos 7 and we strongly recommend adding the SSH key for you local machine. Start the server and ssh into it.
 
 
 
 ## 3. Installation 
 
-We recommend downloading the installer from your Claris account, unzipping it and upload it to your web server. On the one hand downloads from Claris are sometimes very slow and on the other hand you can run the installer without having to download and unpack it first. As a good practice we also rename the rpm file and put it in a hard-to-guess folder.
+We recommend downloading the installer from your Claris account, unzipping it and upload it to your web server. On the one hand downloads from Claris are sometimes very slow and you can also run the installer without having to download and unpack it first. As a good practice we rename the rpm file and put it in a hard-to-guess folder.
 
 `yum localinstall https://yourdomain.com/d0nf2tzu9e/fms-linux-installer.rpm -y`
 
-This installs FileMaker Server interactively but you can also follow the instructions in the server's readme files for the assisted install. 
+This installs FileMaker Server interactively but you can aswell follow the instructions in the installer's readme files for an assisted install. 
 
-When complete, you restart the fmshelper and check, if your desired ports (5003, 16000 etc.) are listening:
+When complete, you restart the fmshelper and check, if your desired ports (80, 443, 5003, 16000, 16001) are listening:
 
 `systemctl restart fmshelper`
+
 `netstat -tulpn`
 
 After that you should be good to go.
@@ -47,13 +48,23 @@ In the Hetzner Console you can 'install' an IP address that can be assigned to a
 
 #### Harden the Server
 
-Yout server is now publically available and most likely under attack already. We recommend to close all the ports you do not need, [disable ICMP ping](https://www.thegeekstuff.com/2010/07/how-to-disable-ping-replies-in-linux/) and [move SHH to a non-standard port](https://blog.devolutions.net/2017/4/10-steps-to-secure-open-ssh).
+Your server is now publically available and most likely under attack already. We recommend to close all the ports you do not need, [disable ICMP ping](https://www.thegeekstuff.com/2010/07/how-to-disable-ping-replies-in-linux/) and [move SHH to a non-standard port](https://blog.devolutions.net/2017/4/10-steps-to-secure-open-ssh).
+
+
+
+#### Access the Admin Console through SSH
+
+You can disable port 16000 and use a tunnel:
+
+`ssh root@yourserverip -L 16001:localhost:16001`
+
+The admin console is now available at http://localhost:16001 on your local machine.
 
 
 
 #### Set up a VPN
 
-You can install WireShark on the server: https://www.wireguard.com/install/ and close all public ports
+You can install WireGuard on the server: https://www.wireguard.com/install and close all public ports. You can access you database using the [Roadwarrior setup](https://www.thomas-krenn.com/en/wiki/WireGuard_Basics).
 
 
 
