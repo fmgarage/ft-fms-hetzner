@@ -28,11 +28,13 @@ We recommend downloading the installer from your Claris account, unzipping it an
 
 This installs FileMaker Server interactively but you can aswell follow the instructions in the installer's readme files for an assisted install. 
 
-When complete, you restart the fmshelper and check, if your desired ports (80, 443, 5003, 16000, 16001) are listening:
-
-`systemctl restart fmshelper`
+When complete, check if your desired ports (80, 443, 5003, 16000, 16001) are listening:
 
 `netstat -tulpn`
+
+if necessary restart the fmshelper and check again.
+
+`systemctl restart fmshelper`
 
 After that you should be good to go.
 
