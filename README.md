@@ -44,6 +44,12 @@ After that you should be good to go.
 
 
 
+#### Save a Snapshot
+
+Configure your FileMaker Server and save a snapshot of the virtual machine. Next time you need a fresh install, use the snapshot as base.
+
+
+
 #### Assign a floating IP
 
 In the Hetzner Console you can 'install' an IP address that can be assigned to any server in your account. This can be used to configure a subdomain like **fmserver.yourdomain.com** and install an SSL certificate for your server.
