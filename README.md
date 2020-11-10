@@ -6,6 +6,8 @@ Run FileMaker Server 19 for Linux in the Hetzner Cloud.
 
 
 
+
+
 ## 1. Register an Account
 
 Go to Hetzner and register a free account. You get a € 20,– credit for plying around if you [follow our referral link](https://hetzner.cloud/?ref=KzxqMaXk51C8). In case you stay  with Hetzner, we receive a € 10,– bonus that we will donate to the [Stiftung Bildung](https://www.stiftungbildung.com). 
