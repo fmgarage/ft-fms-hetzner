@@ -1,6 +1,6 @@
 # fmserver-cloud
 
-Run FileMaker Server 19 for Linux in the Hetzner Cloud.
+Run FileMaker Server 19 for Linux in the Hetzner Cloud. We will add more (like VPN) in the next days.
 
 
 
@@ -16,7 +16,7 @@ Go to Hetzner and register a free account. You get a € 20,– credit to play w
 
 ## 2. Add a Server
 
-In the [Console](https://console.hetzner.cloud/projects) create a project and add a new server. You will need Centos 7 and we strongly recommend adding the SSH key for you local machine. Start the server and ssh into it.
+In the [Console](https://console.hetzner.cloud/projects) create a project and add a new server. You will need Centos 7 and we strongly recommend adding the SSH key for you local machine. You can start with the smallest configuration and scale up later when you need it. Start the server and ssh into it. 
 
 
 
