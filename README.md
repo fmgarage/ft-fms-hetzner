@@ -16,7 +16,7 @@ Go to Hetzner and register a free account. You get a € 20,– credit to play w
 
 ## 2. Add a Server
 
-In the [Console](https://console.hetzner.cloud/projects) create a project and add a new server. You will need Centos 7 and we strongly recommend adding the SSH key for you local machine. You can start with the smallest configuration and scale up later when you need it. Start the server and ssh into it. 
+In the [Console](https://console.hetzner.cloud/projects) create a project and add a new server. You will need Centos 7 and we strongly recommend adding the SSH key for you local machine. You can start with the smallest configuration and scale up later when you need it. Start the server and ssh into it. When scaling up, you can choose to maintain the resource limits (e.g. 20G SSD) so you can scale down again at any time. 
 
 
 
@@ -41,6 +41,8 @@ After that you should be good to go.
 
 
 ## 4. Optional Measures
+
+We will add additional documents for the individual topics.
 
 
 
