@@ -1,4 +1,4 @@
-# fmserver-cloud
+# ft-fms-hetzner (was fmserver-cloud)
 
 Run FileMaker Server 19 for Linux in the Hetzner Cloud. We will add more (like VPN) in the next days.
 
